@@ -1,0 +1,350 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body 
+{
+font-family: Arial, Helvetica, sans-serif;
+margin:0;
+padding:0;
+}
+/*navigation bar*/
+.topnav {
+  overflow: hidden;
+  background-color: white;
+}
+
+.topnav .asd {
+  float: center;
+  display: inline-block;
+  color: black;
+  text-align: center;
+  padding: 14px 8px;
+  text-decoration: none;
+  font-size: 18px;
+bottom:0;
+line-height:2;
+}
+.asd:hover {
+  color: blue;
+border-width:0 0 2px;
+border-style:solid;
+margin-bottom:0;
+}
+
+/*slideshow*/
+* {box-sizing: border-box;}
+.mySlides {display: none;
+width:100%;
+height:100%}
+img {
+vertical-align: middle;
+}
+/* Slideshow container */
+.slideshow-container {
+
+  width: 100%;
+height:80%;
+  position: relative;
+  display:block;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+@media only screen and (max-width: 800px) {
+  .text {font-size: 11px}
+  img{width:100%;}
+}
+.news
+{
+ color:black;
+margin-left: 12%;
+margin-bottom: 5%;
+width:70%;
+display:inline-block;
+}
+.newslink1{height:7%;
+margin-left:10px;
+margin-top:10px;
+margin-bottom:5px;
+line-height:0.5;}
+
+.newslink{
+text-decoration:none;
+margin:0;
+padding:0;
+color:black;
+width:70%;
+display:block;
+}
+.newslink:hover{
+display:inline-block;
+background-color:black;
+color:white;
+width:70%;
+}
+
+
+.box{
+margin-top:30px;
+display:inline-block;
+background-color:#ececec;
+width:100%;
+}
+.box1{text-decoration:none;
+color:black;
+background-color:white;
+display:block;
+height:170px;
+}
+.box1:hover{
+background-color:black;
+color:#efefef;
+filter: grayscale(100%);
+height:270px;
+}
+.box2{
+background-color:white;
+float:left;
+margin-right:3%;
+margin-bottom:6%;
+width:28%;
+height:33%;
+padding:0;
+}
+
+.box3{margin-left:15%;
+margin-right:80px;}
+.container {
+  position:relative;
+  text-align: center;
+}
+.pill{  
+float:center;
+  position:absolute;
+  bottom: 10%;
+  right: 22%;
+  /*background-color: white;*/
+  color: black;
+  width:60%;
+height:75%;
+padding-left: 10px;
+  padding-right: 10px;
+margin-top:5px;
+  }
+input[type=text],input[type=email] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+textarea{  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: green;
+}
+
+.cont {
+  border-radius: 5px;
+  /*background-color: #f2f2f2;*/
+  padding: 20px;
+}
+.footer{postion:absolute;
+dispaly:block;
+top:0;
+left:0;
+}
+</style>
+</head>
+<body>
+<div class="topnav">
+<a href="home.html" style="float:left; margin:2px;"><img src="Images/logo.jpg" height="60px" width="70px"></a>
+    <a href="drugs A-Z.html" class="asd" style="margin-left:10%;">Drugs A-Z</a>
+  <a href="BMI checker.html"  class="asd">BMI Checker</a>
+  <a href="symptom checker.html"  class="asd">Know About Your Body</a>
+  <a href="Diseases.html" class="asd">Diseases</a>
+<a href="dictionary.html"  class="asd">Dictionary</a>
+<a href="#" style="float:right;margin:2px;"><img src="Images/facebook.png"></a>
+<a href="#" style="float:right;margin:2px;"><img src="Images/twitter.png"></a>
+
+
+</div>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="Images/i1.jpg" height="100%" width="100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="Images/i2.jpg" height="100%" width="100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="Images/i3.jpg" height="100%" width="100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="Images/i4.jpg" height="100%" width="100%">
+</div>
+</div>
+<br>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  slides[slideIndex-1].style.display = "block";  
+  setTimeout(showSlides, 3000); 
+}
+</script>
+
+<div style="margin-top:8%; margin-left:5%;">
+<hr style="width:20%; height:10px; margin:0; background-color:black;">
+<h3 >TOP HEALTH AND DRUGS NEWS</h3>
+</div>
+<div class="news">
+<a href="news1.html" target="_blank" class="newslink"><div class="newslink1"><h4>LUNG CANCER</h4>
+<h5 style="color:skyblue;">Prolonged Lung Cancer Screening Boosts Mortality Benefit</h5>
+</div></a>
+<hr style="margin:0; width:70%;">
+<a href="news2.html" target="_blank" class="newslink"><div class="newslink1"><h4>NOT EATING GOOD FOOD</h4>
+<h5 style="color:skyblue; margin-right:10px;">Worse Than Eating Bad Food</h5>
+</div></a>
+<hr style="margin:0; width:70%;">
+<a href="news3.html" target="_blank" class="newslink"><div class="newslink1"><h4>SUGAR LABELING POLICY</h4>
+<h5 style="color:skyblue;">To Pay Sweet Dividends</h5>
+</div></a>
+<hr style="margin:0; width:70%;">
+<a href="news4.html" target="_blank" class="newslink"><div class="newslink1"><h4>KIDNEY FAILURE RISK</h4>
+<h5 style="color:skyblue;">Diabetes Drug 'HOME RUN' Causes Risk</h5>
+</div></a>
+<hr style="margin:0; width:70%;">
+<a href="news5.html" target="_blank" class="newslink"><div class="newslink1"><h4>BMI FOR ASSESSING OBESITY</h4>
+<h5 style="color:skyblue;">Health in Kids</h5>
+</div></a>
+<hr style="margin:0; width:70%;">
+</div>
+<br>
+
+<div class="box">
+<hr style="width:20%; height:10px; background-color:black; margin-top:1.5%; margin-left:80px;">
+<h2 style="margin-left:80px;">FEATURED CONTENT</h2>
+<div class="box3">
+<div class="box2"><a href="sleep.html" target="_blank" class="box1">
+<img src="Images/sleep.jpg" height="80%" width="100%">
+<h4 style="color:skyblue; margin-left:10px;">Sleep Disorders</h4>
+<h5 style="margin-left:10px;">A Visual Guide to Sleeping Disorders</h5>
+</a></div>
+<div class="box2"><a href="allergy.html" target="_blank" class="box1">
+<img src="Images/allergy.jpg" height="80%" width="100%">
+<h4 style="color:skyblue; margin-left:10px;">Allergy</h4>
+<h5 style="margin-left:10px; margin-bottom:10px;">10 Signs Yoiur Allergies Are Out of Control</h5>
+</a></div>
+<div class="box2"><a href="skin.html" target="_blank" class="box1">
+<img src="Images/skin.jpg" height="80%" width="100%">
+<h4 style="color:skyblue; margin-left:10px;">Skin Conditions Gallery</h4>
+<h5 style="margin-left:10px;">An Image Collection of Common Skin Problems</h5>
+</a></div>
+<div class="box2"><a href="dental.html" target="_blank" class="box1">
+<img src="Images/dental.jpg" height="80%" width="100%">
+<h4 style="color:skyblue; margin-left:10px;">Dental Health</h4>
+<h5 style="margin-left:10px;">19 Habits That Wreck Your Teeth</h5>
+</a></div>
+<div class="box2"><a href="diabetes.html" target="_blank" class="box1">
+<img src="Images/diabetes.jpg" height="80%" width="100%">
+<h4 style="color:skyblue; margin-left:10px;">Diabetes and Exercise</h4>
+<h5 style="margin-left:10px;">Weight Training for Diabetes and Blood Sugar Contol</h5>
+</a></div>
+<div class="box2"><a href="migrane.html" target="_blank" class="box1">
+<img src="Images/migrane.jpg" height="80%" width="100%">
+<h4 style="color:skyblue; margin-left:10px;">Migrane Headaches</h4>
+<h5 style="margin-left:10px;">Symptoms, Triggers and Treatment</h5>
+</a></div>
+</div>
+</div>
+<br>
+<div class="container">
+<img src="Images/i5.jpg" height="100%" width="100%">
+<div class="pill">
+<h1 align="center">CONTACT US</h1>
+<hr align="center" width="10%">
+<h3 align="center">Any other question? You can contact us At help@abc.io</h3>
+<h4>
+<div class="cont">
+  <form action="/action_page.php">
+    <input type="text" name="firstname" placeholder="Your name..">
+ 
+
+    <input type="email" name="email" placeholder="abc@gmail.com">
+
+    
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="SEND MESSAGE">
+  </form>
+</div>
+
+</div>
+</div>
+<div style="background-color:#ececec; height:85%; border:2px solid #ececec; display:block;">
+<hr style="width:20%; height:10px; background-color:black; margin-top:4%; margin-left:80px;">
+<h2 style="margin-left:80px;">KNOW YOUR MEDICATIONS</h2>
+<p style="margin-left:100px; margin-right:80px; font-size:20px;">Taking the correct dosage of medication is necessary. As an informed consumer, it is important that you identify your pills. Taking the wrong medication in the incorrect dosage can have consequences. That's why we created the pill identifier: search drugs by imprint, color, shape, brand, or generic name to find out detailed information about the drug. Following are the tips for using Medicines Safely:-</p>
+<ul type="disc" style="margin-left:100px; margin-right:80px; font-size:20px;">
+<li><b>Bring a list or a bag with ALL your medicines when you go to your doctor’s office, the pharmacy, or the hospital.</b> Include all prescription and over-the-counter medicines, vitamins, and herbal supplements that you use. If your doctor prescribes a new medicine, ask if it is safe to use with your other medicines. Remind your doctor and pharmacist if you are allergic to any medicines.</li>
+<li><b>Ask questions about your medicines.</b> Ask questions and make sure you understand the answers. Choose a pharmacist and doctor you feel comfortable talking with about your health and medicines. Take a relative or friend with you to ask questions and remind you about the answers later. Write down the answers.</li>
+<li><b>Make sure your medicine is what the doctor ordered.</b> Does the medicine seem different than what your doctor wrote on the prescription or look different than what you expected? Does a refill look like it is a different shape, color, or size than what you were given before? If something seems wrong, ask the pharmacist to double-check it. Most errors are first found by patients.</li>
+<li><b>Ask how to use the medicine correctly.</b> Read the directions on the label and other information you get with your medicine. Have the pharmacist or doctor explain anything you do not understand. Are there other medicines, foods, or activities (such as driving, drinking alcohol, or using tobacco) that you should avoid while using the medicine? Ask if you need lab tests to check how the medicine is working or to make sure it doesn’t cause harmful side effects.</li>
+<li><b>Ask about possible side effects.</b> Side effects can occur with many medicines. Ask your doctor or pharmacist what side effects to expect and which ones are serious. Some side effects may bother you but will get better after you have been using the medicine for a while. Call your doctor right away if you have a serious side effect or if a side effect does not get better. A change in the medicine or the dose may be needed.</li>
+</ul>
+</div>
+<div class="footer">
+<img src="Images/footer.jpg" width="100%" height="40%">
+</div>
+</body>
+</html>
